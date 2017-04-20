@@ -77,7 +77,7 @@ public class programmer {
   }
 
   // 생성자
-  programmer() {
+  public programmer() {
     name = "으아악";
     age = 30;
 
@@ -85,7 +85,7 @@ public class programmer {
   }
 
   // 소멸자
-  ~programmer() {
+  public ~programmer() {
     name = "호엑";
     age = 444;
 
@@ -103,7 +103,7 @@ main() {
 ```csharp
 public class programmer {
   // 생성자
-  programmer(string _name, int _age) {
+  public programmer(string _name, int _age) {
     name = _name;
     age = _age;
 
