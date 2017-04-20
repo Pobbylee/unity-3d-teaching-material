@@ -97,7 +97,7 @@ public int Plus(params int[] values) {
 
 
 1. 각각의 함수안에 설명을 보고 코딩을 해보세요.
-```
+```csharp
 public int Plus(int a, int b) {
   // 덧셈해서 return 하는 코드를 작성하세요~
 }
