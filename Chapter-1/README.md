@@ -21,12 +21,12 @@ Unity 3D든 어떤 것이든 맨 처음 시작할 때에는 기본 환경을 설
 
 1. 안드로이드 스튜디오를 다운받은 후 안드로이드 스튜디오를 더블클릭 하여 엽니다.
 
-![이미지1](https://vallista.github.io/Image/Chapter-1/homework-1.png)
+![이미지1](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-1/homework-1.png?raw=true)
 
 2. 열었으면 위의 이미지처럼 보이는 Configure -> SDK Manager을 클릭하세요.
 
-![이미지2](https://vallista.github.io/Image/Chapter-1/homework-2.png)
-![이미지3](https://vallista.github.io/Image/Chapter-1/homework-3.png)
+![이미지2](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-1/homework-2.png?raw=true)
+![이미지3](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-1/homework-3.png?raw=true)
 
 3. 그 다음 위의 이미지 두개처럼 SDK Platforms, SDK Tools 두 탭에 모두 체크를 해주세요.
 그리고 다운로드를 눌러서 긴 시간동안 기다려주시면 됩니다.
@@ -37,6 +37,6 @@ Unity 3D든 어떤 것이든 맨 처음 시작할 때에는 기본 환경을 설
 
 5. 압축을 풀고 해당 폴더를 sdk가 설치된 폴더를 열어서 거기에 넣기 전에, 기존에 있던 tools 라는 폴더가 있을텐데, 이 폴더의 이름을 toolsXXXX로 바꿔주세요. 그리고 tools를 넣어주시면 됩니다. 아래의 이미지 처럼요.
 
- ![이미지4](https://vallista.github.io/Image/Chapter-1/homework-4.png)
+ ![이미지4](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-1/homework-4.png?raw=true)
 
 이 것을 안한다고 수업을 듣지 못하는 것은 아니지만, 나중에 안드로이드 컨버트를 할 때 시간이 매우 오래 걸리기 때문에 사전에 다운로드 하는 방향으로 했으니 되도록이면 집에서 설치해주시기 바랍니다. ㅠ.ㅠ

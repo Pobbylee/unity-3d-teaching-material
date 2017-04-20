@@ -88,10 +88,6 @@ stature = 160;
 
 stature의 180이라는 숫자는 절대 바뀌지 않아요. 바꾸면 컴파일러가 에러를 냅니다. 확인해볼까요?
 
-![이미지1](https://vallista.github.io/Image/Chapter-2/1.png)
-
-밑에 보면 아래와 같이 나와있어요.
-
     prog.cs(11,3): error CS0131: The left-hand side of an assignment must be a variable, a property or an indexer
     Compilation failed: 1 error(s), 0 warnings
 
