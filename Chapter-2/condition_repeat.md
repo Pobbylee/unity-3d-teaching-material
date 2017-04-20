@@ -4,7 +4,7 @@
 
 - `if`
 
-```C#
+```csharp
 int score = 100;
 string rank = "A";
 
@@ -25,7 +25,7 @@ if(score <= 50) {
 
 위의 소스처럼 조건을 한개만 써서 깔끔하게 표현되지 않는 것들은 어떻게 표현해야 할까요?
 
-```C#
+```csharp
 bool isClicked = true;
 bool isUsed = true;
 bool isHave = true;
@@ -46,7 +46,7 @@ if(isClicked == false || isUsed == false || isHave == false) {
 두번째 조건문은 `||` 를 사용하는 예제인데요. 이 `||`는 `혹은`을 나타냅니다. 즉 isClicked, isUsed 그리고 isHave 중 하나가 false가 되기만 한다면 원상복귀 되는 소스입니다.
 
 > 이렇게도 내타낼 수 있어요.
-> ```C#
+> ```csharp
 > if(isClicked) {
 >   // 코딩
 > }
@@ -54,11 +54,9 @@ if(isClicked == false || isUsed == false || isHave == false) {
 > 이렇게 하면 isClicked == true와 같은 문장입니다.
 > 앞에 !를 붙인다면 isClicked == false와 같겠죠?
 
----
-
 - `Switch`
 
-```C#
+```csharp
 int score = 100;
 bool isPerfect = false;
 
@@ -74,30 +72,28 @@ switch(score) {
 
 위의 소스코드는 간단하게 만점을 체크하는 코드입니다. 딱봐도 이해가 가능하죠?
 
----
-
 ### 반복문
 
 반복문은 for, while 이 두개만 알면 되지만 보통 while은 잘 쓰지 않는답니다.
 
 - `for`
 
-```C#
+```csharp
 for (int i = 0; i < 10; i++) {
   // 코드
 }
 ```
 
 위의 예제는 for문을 단순 10번 반복시키는 코드입니다.
-조금 변형 시켜볼까요?
+for말고 foreach를 통해서 순차 순회도 할 수 있습니다.
 
-```C#
+```csharp
 List<int> list = new List<int>;
 list.Add(10);
 list.Add(20);
 list.Add(30);
 
-for (int a in list) {
+foreach (int a in list) {
   // a는 list를 순차적으로 돌아 list[0]부터 끝까지 루프마다 대입됩니다.
 }
 ```
@@ -106,7 +102,7 @@ for (int a in list) {
 
 - `While`
 
-```C#
+```csharp
 int loop = 0;
 
 while(loop < 100) {

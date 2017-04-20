@@ -4,16 +4,16 @@
 
 변수와 상수는 각각 아래와 같이 선언합니다.
 
-```C#
+```csharp
 int a = 0; // 변수
 const int b = 0; // 상수
 ```
 
 차이점을 아셨나요? `const`가 붙으면 상수가 된다는 점 입니다.
 
-C#에서 변수와 상수는 위 처럼 선언 합니다. 하지만 저렇게 만드는 것에도 규약이 있는데요. 아래와 같아요.
+c#에서 변수와 상수는 위 처럼 선언 합니다. 하지만 저렇게 만드는 것에도 규약이 있는데요. 아래와 같아요.
 
-```C#
+```csharp
 int a = 0;
 
 ...(const, virtual 등 optional field)
@@ -49,7 +49,7 @@ bool은 논리 연산을 담당하는 자료형이에요. 값의 범위를 보�
 어떤곳에 쓰일 수 있냐면, 게임에서 불을 키는 명령이 '눌렀다' 의 조건이 필요하죠?
 이런 조건이 필요할 때 자료형으로써 쓰게 되요.
 
-```C#
+```csharp
 bool check = true;
 ```
 
@@ -59,30 +59,28 @@ bool check = true;
 
 string은 문자열을 담는 자료형입니다.
 
-```C#
+```csharp
 string name = "마광휘";
 ```
 
 라고 하면 name에는 "마광휘" 라는 문자열이 들어있게 되요.
 
----
-
 데이터 타입들을 배웟으니 변수와 상수를 아래와 같이 선언을 할 수 있게 되었어요.
 
-```C#
+```csharp
 string name = "마광휘";
 const int stature = 180;
 ```
 
 이렇게 선언을 하고 한번 바꿔봅시다.
 
-```C#
+```csharp
 name = "으아악";
 ```
 
 name은 바꿀 수 있어요. 왜냐하면 변수거든요. 한번 상수를 바꿔볼께요.
 
-```C#
+```csharp
 stature = 160;
 ```
 
@@ -91,11 +89,9 @@ stature의 180이라는 숫자는 절대 바뀌지 않아요. 바꾸면 컴파�
     prog.cs(11,3): error CS0131: The left-hand side of an assignment must be a variable, a property or an indexer
     Compilation failed: 1 error(s), 0 warnings
 
----
-
 ### 형식 변환 (Type casting)
 
-```C#
+```csharp
 float a = 30.01f;
 int b = 10;
 
@@ -106,7 +102,7 @@ Console.WriteLine("a + b = {0}", a+b);
 
 예를들자면..
 
-```C#
+```csharp
 float x = 300.45f;
 int cellX = x / 15;
 
@@ -115,7 +111,7 @@ Console.WriteLine("{0}", cellX);
 
 이런식의 과정이 왜 필요하냐고 물으신다면 위의 값은 타일맵을 만들때 보통으로 쓰이는 용법입니다. 이렇게 연산을 하면 어떻게 될까요? 위 처럼 에러가 출력된답니다. 이 문제는 float값을 int로 옮겼을때 발생되는데요. 이러한 문제를 해결하기 위해서는 아래처럼 해주면 됩니다.
 
-```C#
+```csharp
 float x = 300.45f;
 int cellX = int(x / 15);
 
@@ -129,7 +125,7 @@ Console.WriteLine("{0}", cellX);
 근데 숫자를 문자로 바꿔야 할 경우도 있죠? 물론 그 반대의 경우도 있을꺼에요.
 그 경우에는 이렇게 해주면 되요.
 
-```C#
+```csharp
 float x = 300.045f;
 string y = "123123.444";
 
@@ -143,14 +139,12 @@ Console.WriteLine("a={0}", "b={1}", a, b);
 
 다만 이런 형식 변환을 많이, 자주 사용하면 안되요. 왜 그러냐면 **박싱 언박싱** 이라는 개념이 있는데, 이 개념은 [링크](http://vallista.tistory.com/entry/C-%EB%B0%95%EC%8B%B1%EA%B3%BC-%EC%96%B8%EB%B0%95%EC%8B%B1) 제 예전 블로그의 글에서 볼 수 있어요. 궁금한 학생들은 들어가서 봐주세요.
 
----
-
 ### 배열 (Array)
 
 배열은 대괄호 `[]` 를 이용해서 만들게 됩니다.
 배열을 선언하는 여러가지 방법에 대해서 보도록 할께요.
 
-```C#
+```csharp
 // 초기화 하면서 동시에 배열 데이터까지 넣는 방법
 int[] arr = { 2, 5, 8, 11, 14, 21, 24 };
 // 위의 소스와 똑같습니다.
@@ -161,14 +155,14 @@ int[] arr = new int[10];
 
 접근할 때는 이렇게 한답니다.
 
-```C#
+```csharp
 // 배열은 0부터 시작이니 0,1,2,3,4 이므로 5번째 배열에 10을 대입한다는 뜻입니다.
 arr[4] = 10;
 ```
 
 쉽죠? 물론 배열은 일차원만 있는게 아니라 이차원배열도 있고 삼차원배열도 있습니다.
 
-```C#
+```csharp
 int[,] arr = {
   {10, 10}
   ,{20, 20}
@@ -179,13 +173,11 @@ int[,] arr = new int[10,10];
 
 이런식으로 이타원 배열도 선언할 수 있어요. 삼차원배열은 각자 해보도록 해요.
 
----
-
 ### 컬렉션 (collection)
 
 Array는 런타임[^1]시에 즉각 배열의 크기를 바꿀 수 없어요. 실행 전 크기가 고정되어 쭉 가는데 근데 게임에서는 몬스터의 수가 얼마나 늘어날 지 알 수가 없기 때문에 실시간으로 늘어났다 줄어야 해요. 그러면 실시간으로 늘어나는 배열들이 필요한데 이러한 필요성이 과거에도 있었기에 우리는 만들어진 것을 가져다가 쓰면되요.
 
-```C#
+```csharp
 using System.Collection.Generic;
 ```
 
@@ -195,7 +187,7 @@ using System.Collection.Generic;
 
 - `List<T>`
 
-```C#
+```csharp
 List<int> list = new List<int>();
 
 // 데이터 추가
@@ -224,7 +216,7 @@ Add할 때는 `<>` 사이에 선언한 자료형에 대한 변수들을 넣어�
 
 - `Dictionary<TKey, TValue>`
 
-```C#
+```csharp
 Dictionary<string, int> dic = new Dictionary<string, int>();
 
 // 데이터 추가
