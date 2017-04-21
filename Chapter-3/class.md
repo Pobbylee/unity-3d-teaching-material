@@ -17,7 +17,7 @@ public class programmer {
 }
 ```
 
-클래스 안에 클래스를 만들어서 쓸 수 있습니다.
+클래스 안에 클래스를 선언해서 쓸 수 있습니다.
 
 ```csharp
 public class Programmer...
@@ -56,6 +56,61 @@ public class job {
   }
 }
 ```
+
+클래스를 분할시켜서 각각 다르게 구현할 수도 있습니다.
+클래스를 분할시킬 때는 클래스가 길어지거나 할 때, 변수선언을 따로 해주고 싶을때 해주시면 됩니다.
+
+```csharp
+partial class partialClass {
+  public void test() {
+    Console.WriteLine("1");
+  }
+}
+
+partial class partialClass {
+  public void test1() {
+    Console.WriteLine("2");
+  }
+}
+
+partial class partialClass {
+  public void test2() {
+    Console.WriteLine("3");
+  }
+}
+
+main() {
+  partialClass pc = new partialClass();
+  pc.test();
+  pc.test1();
+  pc.test2();
+}
+```
+
+클래스 안에 클래스를 쓸 수도 있습니다. 다만 클래스 안에 있는 클래스 (Inner class라고 합니다.) 가 래핑한 클래스의 데이터에 접근을 바로하진 못합니다. 하기위해서는 데이터를 받아와야 합니다.
+
+```csharp
+public class A {
+  public void a() {
+    Console.WriteLine("A");
+  }
+
+  public class B {
+    public void b() {
+      Console.WriteLine("B");
+    }
+  }
+}
+
+main() {
+  A a = new A();
+  A.B b = new A.B();
+
+  a.a();
+  b.b();
+}
+```
+
 
 ### 생성자와 소멸자 (Constructor & Destructor)
 

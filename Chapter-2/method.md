@@ -96,7 +96,7 @@ public int Plus(params int[] values) {
 아래의 메소드의 빈칸에 알맞게 넣어서 실행해보도록 해요.
 
 
-1. 각각의 함수안에 설명을 보고 코딩을 해보세요.
+- 각각의 함수안에 설명을 보고 코딩을 해보세요.
 ```csharp
 public int Plus(int a, int b) {
   // 덧셈해서 return 하는 코드를 작성하세요~
@@ -115,4 +115,4 @@ public int Mul(int a, int b) {
 }
 ```
 
-2. 이름을 한번, int형 데이터를 무제한으로 받는 함수를 만들어서 이름과 int형 데이터의 합을 `return` 하는 함수를 만들어보세요.
+- 이름을 한번, int형 데이터를 무제한으로 받는 함수를 만들어서 이름과 int형 데이터의 합을 `return` 하는 함수를 만들어보세요.
