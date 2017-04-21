@@ -4,7 +4,7 @@
 C# 에서는 상속을 이렇게 할 수 있어요.
 
 ```csharp
-public class job...
+public class job {}
 
 public class programmer : job {
 
@@ -103,67 +103,13 @@ Console.WriteLine("{0}", c.a);
 }
 ```
 
-클래스를 분할시켜서 각각 다르게 구현할 수도 있습니다.
-클래스를 분할시킬 때는 클래스가 길어지거나 할 때, 변수선언을 따로 해주고 싶을때 해주시면 됩니다.
+다중 상속은 안되요. 하기 위해서는 `interface`를 써야되요.
 
 ```csharp
-partial class partialClass {
-public void test() {
-Console.WriteLine("1");
-}
-}
+public interface IJob {}
+public interface IIT {}
 
-partial class partialClass {
-public void test1() {
-Console.WriteLine("2");
-}
-}
-
-partial class partialClass {
-public void test2() {
-Console.WriteLine("3");
-}
-}
-
-main() {
-partialClass pc = new partialClass();
-pc.test();
-pc.test1();
-pc.test2();
-}
-```
-
-클래스 안에 클래스를 쓸 수도 있습니다. 다만 클래스 안에 있는 클래스 (Inner class라고 합니다.) 가 래핑한 클래스의 데이터에 접근을 바로하진 못합니다. 하기위해서는 데이터를 받아와야 합니다.
-
-```csharp
-public class A {
-public void a() {
-Console.WriteLine("A");
-}
-
-public class B {
-public void b() {
-Console.WriteLine("B");
-}
-}
-}
-
-main() {
-A a = new A();
-A.B b = new A.B();
-
-a.a();
-b.b();
-}
-```
-
-다중 상속은 안되요. 하기 위해서 `interface`를 써야되요.
-
-```csharp
-public interface IJob..
-public interface IIT...
-
-public interface IProgrammer : IJob, IIT...
+public interface IProgrammer : IJob, IIT {}
 
 public class Programmer : IProgrammer {
 // job, IT, IProgrammer의 상속받은 함수들 사용.
@@ -171,6 +117,33 @@ public class Programmer : IProgrammer {
 
 ```
 
-보통 인터페이스는 위와 같이 앞에 I를 붙여주며. `interface`는 내부에 클래스처럼 변수를 사용할 수 없어요.
+인터페이스에 대해서는 나중에 다시 다뤄보도록 하겠습니다.
 
-그러므로 다중상속을 해주려면 위처럼 거쳐야 합니다. `interface` 추후에 매우 요긴하게 쓰이고 구조 잡을대도 쓰이기 때문에 개인적으로 많이 연습하셔야 될 꺼에요.
+### 실습
+
+ - 아래의 소스코드에 ???에 무엇을 넣어야 할까요?
+
+ ```csharp
+ class Unit {
+   //???
+ }
+
+ class Marine : ??? {
+   //???
+ }
+
+ class Ghost : ??? {  
+   //???
+ }
+
+ main() {
+   Unit[] list = new Unit[12];
+   list[0] = new Marine(50, 6, 2);
+   list[1] = new Ghost(45, 12, 4);
+
+   list[0].hp -= 10;
+   list[0].atk += 1;
+   list[0].range += 1;
+   list[1].range += 2;
+ }
+ ```

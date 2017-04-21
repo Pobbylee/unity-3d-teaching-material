@@ -20,9 +20,9 @@ public class programmer {
 클래스 안에 클래스를 선언해서 쓸 수 있습니다.
 
 ```csharp
-public class Programmer...
-public class Artist...
-public class Producer...
+public class Programmer {}
+public class Artist {}
+public class Producer {}
 
 public class job {
   private Programmer programmer;
@@ -58,7 +58,7 @@ public class job {
 ```
 
 클래스를 분할시켜서 각각 다르게 구현할 수도 있습니다.
-클래스를 분할시킬 때는 클래스가 길어지거나 할 때, 변수선언을 따로 해주고 싶을때 해주시면 됩니다.
+보통 클래스가 길어지거나 할 때, 변수선언을 따로 만들어서 보고 싶을때 나눕니다.
 
 ```csharp
 partial class partialClass {
