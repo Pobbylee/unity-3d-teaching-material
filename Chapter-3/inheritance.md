@@ -15,15 +15,15 @@ public class programmer : job {
 
 ```csharp
 public class job {
-int salary;
-int years;
+  int salary;
+  int years;
 }
 
 public class programmer : job{
-public programmer() {
-this.salary = 3500;
-this.years = 3;
-}
+  public programmer() {
+    this.salary = 3500;
+    this.years = 3;
+  }
 }
 ```
 
@@ -31,15 +31,15 @@ this.years = 3;
 
 ```csharp
 sealed class job {
-int salary;
-int years;
+  int salary;
+  int years;
 }
 
 public class programmer : job{
-public programmer() {
-this.salary = 3500;
-this.years = 3;
-}
+  public programmer() {
+    this.salary = 3500;
+    this.years = 3;
+  }
 }
 
 // 실행하면 에러가 발생!
@@ -49,30 +49,30 @@ this.years = 3;
 
 ```csharp
 public class parent {
-public virtual void a() {
-Console.WriteLine("parent의 호출");
-}
+  public virtual void a() {
+    Console.WriteLine("parent의 호출");
+  }
 }
 public class child1 : parent {
-public override void a() {
-Console.WriteLine("child1 호출");
-}
+  public override void a() {
+    Console.WriteLine("child1 호출");
+  }
 }
 public class child2 : parent {
-public override void a() {
-Console.WriteLine("child2 호출");
-}
+  public override void a() {
+    Console.WriteLine("child2 호출");
+  }
 }
 
 main() {
-parent p = new parent();
-p.a();
+  parent p = new parent();
+  p.a();
 
-child1 c1 = new child1();
-c1.a();
+  child1 c1 = new child1();
+  c1.a();
 
-child2 c2 = new child2();
-c2.a();
+  child2 c2 = new child2();
+  c2.a();
 }
 ```
 
@@ -80,26 +80,26 @@ c2.a();
 
 ```csharp
 public class parent {
-public int a = 0;
-public void A() {
-Console.WriteLine("parent의 호출");
-}
+  public int a = 0;
+  public void A() {
+    Console.WriteLine("parent의 호출");
+  }
 }
 public class child : parent {
-public new int a = 100;
-public new void A()) {
-Console.WriteLine("child1 호출");
-}
+  public new int a = 100;
+  public new void A()) {
+    Console.WriteLine("child1 호출");
+  }
 }
 
 main() {
-parent p = new parent();
-p.A();
-Console.WriteLine("{0}", p.a);
+  parent p = new parent();
+  p.A();
+  Console.WriteLine("{0}", p.a);
 
-child c = new child();
-c.A();
-Console.WriteLine("{0}", c.a);
+  child c = new child();
+  c.A();
+  Console.WriteLine("{0}", c.a);
 }
 ```
 
@@ -112,7 +112,7 @@ public interface IIT {}
 public interface IProgrammer : IJob, IIT {}
 
 public class Programmer : IProgrammer {
-// job, IT, IProgrammer의 상속받은 함수들 사용.
+  // job, IT, IProgrammer의 상속받은 함수들 사용.
 }
 
 ```
@@ -122,6 +122,9 @@ public class Programmer : IProgrammer {
 ### 실습
 
  - 아래의 소스코드에 ???에 무엇을 넣어야 할까요?
+
+
+
 
  ```csharp
  class Unit {
