@@ -87,7 +87,7 @@ public class parent {
 }
 public class child : parent {
   public new int a = 100;
-  public new void A()) {
+  public new void A() {
     Console.WriteLine("child1 호출");
   }
 }
@@ -144,9 +144,9 @@ public class Programmer : IProgrammer {
    list[0] = new Marine(50, 6, 2);
    list[1] = new Ghost(45, 12, 4);
 
-   list[0].hp -= 10;
-   list[0].atk += 1;
-   list[0].range += 1;
-   list[1].range += 2;
+   list[0].hp = list[0].hp - 10;
+   list[0].atk = list[0].atk + 1;
+   list[0].range = list[0].range + 1;
+   list[1].range = list[1].range + 2;
  }
  ```
