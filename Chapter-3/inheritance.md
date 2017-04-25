@@ -1,5 +1,4 @@
-#
-## 상속 (Inheritance)
+### 상속 (Inheritance)
 
 C# 에서는 상속을 이렇게 할 수 있어요.
 
