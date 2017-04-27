@@ -8,6 +8,14 @@
 
 ![이미지5](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-5/5.png?raw=true)
 
+> 위치가 이상한데에 만들어질 수도 있습니다. 포지션이 이상하게 잡히기 때문인데요.
+>
+> ![이미지30](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-5/30.png?raw=true)
+>
+> 이렇게 잡힐 경우에는 오른쪽 상단의 톱니바퀴를 누르시고 Reset을 눌러주세요. 그럼 포지션이 0으로 리셋됩니다!
+>
+> ![이미지31](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-5/31.png?raw=true)
+
 `Player`라는 새로운 오브젝트를 만들어서 그 안에 지금 만든 `Cube`를 넣어주세요. 그리고 이름을 `Body`로 바꿔주세요.
 
 이렇게 하는 이유는 `Player`를 움직이면 하위 오브젝트인 `Body`까지 움직이기 때문입니다. 이렇게 해주면 장점이 뭘까요? 하위 오브젝트들을 관리하기 쉬워진다는 장점이 있습니다. 또 명시적으로 `Player`안에 들어있기 때문에 `Player`의 것입니다를 알 수 있죠.
@@ -35,6 +43,10 @@
 ![이미지9](https://github.com/Vallista/unity-3d-teaching-material/blob/master/Image/Chapter-5/9.png?raw=true)
 
 `Box Collider`는 알겠는데, 새로 추가한 `Rigid Body`는 무엇인지 모를거에요. `Rigid Body`는 `강체`라는 뜻으로 컴포넌트를 추가하면 물리의 영향을 받게 됩니다.
+
+> 강체란 무엇인가?
+> 강체(剛體, Rigid body)란 물리학에서 형태가 고정되어 변하지 않는 물체를 가리킨다. 강체는 외력이 가해져도 모양이나 크기가 변형되지 않는다.
+> **간단하게 말하자면 물리적인 몸체를 부여한다고 보시면 됩니다.**
 
 `Rigid Body`는 충돌할 때도 필요한데, 서로 다른 두 오브젝트가 충돌을 할 때 둘중 하나는 Rigid Body가 있어야 충돌처리가 됩니다. 굉장히 중요하니 까먹지마세요!
 
